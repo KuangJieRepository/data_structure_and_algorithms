@@ -147,10 +147,8 @@ public class BinarySearch {
 
     /**
      * rightmost - 改版
-     * <p>
-     * 返回查找的元素的索引或者，要插入的索引位置
-     * <p>
-     *  ≤ target 的最右边的位置
+     * <p> 返回查找的元素的索引或者，要插入的索引位置
+     * <p> ≤ target 的最右边的位置
      */
     public static int search5_1(int[] nums, int target) {
         int i = 0, j = nums.length - 1;
