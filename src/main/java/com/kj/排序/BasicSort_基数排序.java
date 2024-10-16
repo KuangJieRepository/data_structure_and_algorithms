@@ -13,8 +13,14 @@ import java.util.List;
 public class BasicSort_基数排序 {
 
     public static void main(String[] args) {
-        int[] arr = {1314, 82, 50, 21, 5, 66, 48, 43, 79, 14, 37, 25};
-        System.out.println(Arrays.toString(sort(arr)));
+        int[] arr1 = {6, 5, 4, 3, 2, 1};
+        sort(arr1);
+
+        int[] arr2 = {5, 4, 3, 2, 1};
+        sort(arr2);
+
+        System.out.println("arr1：：" + Arrays.toString(arr1));
+        System.out.println("arr2：：" + Arrays.toString(arr2));
     }
 
     /**
@@ -22,7 +28,7 @@ public class BasicSort_基数排序 {
      *
      * @param arr 数据
      */
-    private static int[] sort(int[] arr) {
+    private static void sort(int[] arr) {
         // 1.找到最大数
         int max = 0;
         for (int j : arr) {
@@ -55,6 +61,5 @@ public class BasicSort_基数排序 {
                 bucket.clear();
             }
         }
-        return arr;
     }
 }

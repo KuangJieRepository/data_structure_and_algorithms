@@ -14,11 +14,14 @@ import java.util.Arrays;
  */
 public class SelectSort_选择排序 {
     public static void main(String[] args) {
-        int[] arr = {1314, 82, 50, 21, 5, 66, 48, 43, 79, 14, 37, 25};
+        int[] arr1 = {6, 5, 4, 3, 2, 1};
+        int[] arr2 = {5, 4, 3, 2, 1};
 
-        sort(arr);
+        sort(arr1);
+        sort(arr2);
 
-        System.out.println(Arrays.toString(arr));
+        System.out.println("arr1：：" + Arrays.toString(arr1));
+        System.out.println("arr2：：" + Arrays.toString(arr2));
     }
 
     public static void sort(int[] arr) {

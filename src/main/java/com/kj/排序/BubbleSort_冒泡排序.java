@@ -10,15 +10,20 @@ import java.util.Arrays;
  */
 public class BubbleSort_冒泡排序 {
     public static void main(String[] args) {
-        int[] arr = {1314, 82, 50, 21, 5, 66, 48, 43, 79, 14, 37, 25};
-        System.out.println(Arrays.toString(sort(arr)));
-        System.out.println(Arrays.toString(sort2(arr)));
+        int[] arr1 = {6, 5, 4, 3, 2, 1};
+        sort(arr1);
+
+        int[] arr2 = {5, 4, 3, 2, 1};
+        sort(arr2);
+
+        System.out.println("arr1：：" + Arrays.toString(arr1));
+        System.out.println("arr2：：" + Arrays.toString(arr2));
     }
 
     /**
      * 冒泡排序
      */
-    private static int[] sort(int[] arr) {
+    private static void sort(int[] arr) {
         int tmp;
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - 1 - i; j++) {
@@ -29,13 +34,12 @@ public class BubbleSort_冒泡排序 {
                 }
             }
         }
-        return arr;
     }
 
     /**
      * 改进-提前结束比较
      */
-    private static int[] sort2(int[] arr) {
+    private static void sort2(int[] arr) {
         int tmp;
         for (int i = 0; i < arr.length - 1; i++) {
             boolean flag = false;
@@ -52,6 +56,5 @@ public class BubbleSort_冒泡排序 {
                 break;
             }
         }
-        return arr;
     }
 }
