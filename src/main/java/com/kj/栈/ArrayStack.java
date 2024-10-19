@@ -89,6 +89,6 @@ public class ArrayStack<T> {
         for (int i = top; i >= 0; i--) {
             System.out.printf("stack[%s]:%s\n", i, arr[i]);
         }
-        System.out.println("======end======");
+        System.out.println("=======end=======");
     }
 }
