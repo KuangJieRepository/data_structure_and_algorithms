@@ -44,13 +44,18 @@ public class Calculator_计算器 extends ArrayStack {
      * @return 结果
      */
     private int calcNum(int n1, int n2, String operator) {
-        return switch (operator) {
-            case "+" -> n1 + n2;
-            case "-" -> n1 - n2;
-            case "*" -> n1 * n2;
-            case "/" -> n1 / n2;
-            default -> throw new IllegalArgumentException("无效操作符");
-        };
+        switch (operator) {
+            case "+":
+                return n1 + n2;
+            case "-":
+                return n1 - n2;
+            case "*":
+                return n1 * n2;
+            case "/":
+                return n1 / n2;
+            default:
+                throw new IllegalArgumentException("无效操作符");
+        }
     }
 
     /**

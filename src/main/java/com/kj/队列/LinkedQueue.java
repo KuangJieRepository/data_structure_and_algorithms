@@ -64,7 +64,7 @@ public class LinkedQueue<T> implements Iterable<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return new Iterator<>() {
+        return new Iterator() {
             private Node node = head;
 
             @Override
