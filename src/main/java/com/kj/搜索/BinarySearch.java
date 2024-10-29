@@ -1,4 +1,4 @@
-package com.kj.search;
+package com.kj.搜索;
 
 /**
  * @Description 二分法查找
@@ -161,5 +161,52 @@ public class BinarySearch {
             }
         }
         return i - 1;
+    }
+
+    /**
+     * 递归版本
+     *
+     * @param arr 目标数组
+     * @param left 左
+     * @param right 右
+     * @param findVal 目标值
+     * @return 索引
+     */
+    public static int recursion(int[] arr, int left, int right, int findVal) {
+        if (left > right || findVal < arr[left] || findVal > arr[right]) {
+            return -1;
+        }
+
+        int midIndex = (left + right) >> 1;
+
+        if (findVal < arr[midIndex]) {
+            return recursion(arr, left, midIndex - 1, findVal);
+        } else if (findVal > arr[midIndex]) {
+            return recursion(arr, midIndex + 1, right, findVal);
+        } else {
+            return midIndex;
+        }
+    }
+
+    /**
+     * 插值搜索
+     * 进阶版本的二分查找，关键在于公式
+     *
+     */
+    public static int recursionInsert(int[] arr, int left, int right, int findVal) {
+        if (left > right || findVal < arr[left] || findVal > arr[right]) {
+            return -1;
+        }
+
+        // 核心在于中间值的自适应查询公式
+        int midIndex = left + (right - left) * (findVal - arr[left]) / (arr[right] - arr[left]);
+
+        if (findVal < arr[midIndex]) {
+            return recursion(arr, left, midIndex - 1, findVal);
+        } else if (findVal > arr[midIndex]) {
+            return recursion(arr, midIndex + 1, right, findVal);
+        } else {
+            return midIndex;
+        }
     }
 }

@@ -1,4 +1,4 @@
-package com.kj.search;
+package com.kj.搜索;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -106,5 +106,23 @@ class BinarySearchTest {
 
         log.debug("{}", BinarySearch.search5_1(nums, 3));
         log.debug("{}", BinarySearch.search5_1(nums, 34));
+    }
+
+    @Test
+    void recursion() {
+        int[] nums = new int[]{2, 5, 7, 7, 7, 8, 10, 33};
+
+        log.debug("{}", BinarySearch.recursion(nums, 0, nums.length - 1, 7));
+        log.debug("{}", BinarySearch.recursion(nums, 0, nums.length - 1, 5));
+        log.debug("{}", BinarySearch.recursion(nums, 0, nums.length - 1, 33));
+    }
+
+    @Test
+    void recursion2() {
+        int[] nums = new int[]{2, 5, 7, 7, 7, 8, 10, 33};
+
+        log.debug("{}", BinarySearch.recursionInsert(nums, 0, nums.length - 1, 7));
+        log.debug("{}", BinarySearch.recursionInsert(nums, 0, nums.length - 1, 5));
+        log.debug("{}", BinarySearch.recursionInsert(nums, 0, nums.length - 1, 33));
     }
 }
