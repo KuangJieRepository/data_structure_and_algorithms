@@ -1,4 +1,4 @@
-package com.kj.力扣;
+package com.kj.力扣.未通过;
 
 /**
  * 未通过
@@ -6,10 +6,10 @@ package com.kj.力扣;
  * @author kj
  * @date 2024/10/16
  */
-public class Solution_215_未通过 {
+public class Solution_215 {
     public static void main(String[] args) {
         int[] arr1 = {6, 5, 4, 3, 2, 1};
-        int rs = new Solution_215_未通过().findKthLargest(arr1, 1);
+        int rs = new Solution_215().findKthLargest(arr1, 1);
         System.out.println(rs);
     }
 
