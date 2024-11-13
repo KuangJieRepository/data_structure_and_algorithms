@@ -1,4 +1,4 @@
-package com.kj.力扣.hard;
+package com.kj.力扣.mid;
 
 class Solution_151_反转字符串中的单词 {
     public static void main(String[] args) {
